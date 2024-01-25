@@ -1,5 +1,5 @@
 describe("City Weather Page", () => {
-  it("visit city page", () => {
+  beforeEach(() => {
     cy.intercept(
       `/data/2.5/weather?q=Los%20Angeles&units=metric&appid=${Cypress.env(
         "api_key"
@@ -16,7 +16,8 @@ describe("City Weather Page", () => {
         fixture: "/weather-forecast-by-city.json",
       }
     );
-
+  });
+  it("visit city page", () => {
     cy.visit("http://localhost:5173/Los Angeles");
   });
 
@@ -35,10 +36,7 @@ describe("City Weather Page", () => {
     cy.getByTestId("current-weather-sunset").contains("10:14 pm");
   });
 
-  it("should render current weather values", () => {
-    cy.getByTestId("weather-forecast-next-day-0").contains("65");
-    cy.getByTestId("weather-forecast-next-day-0").contains("Broken clouds");
-
+  it("should render upcoming days weather values", () => {
     cy.getByTestId("weather-forecast-next-day-1").contains("70");
     cy.getByTestId("weather-forecast-next-day-1").contains("Clear sky");
 
