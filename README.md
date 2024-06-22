@@ -23,25 +23,7 @@ yarn dev
 
 ## Tests
 
-- Unfortunately I didn't have enough time available to have good test coverage in the application, but I implemented some basic e2e tests using cypress, but I would definitely do unit tests for the components / hooks and utils, and I would also add more scenarios in the e2e test to cover 100 %.
-
-### Running tests
-
-```bash
-npm run test
-
-# or
-yarn test
-```
-
-* To view the tests being executed in the Cypress interface, simply run:
-
-```bash
-npm run cy:e2e
-
-# or
-yarn cy:e2e
-```
+- Unfortunately I didn't have enough time available to have good test coverage in the application, but I implemented some basic e2e tests using cypress, but I would definitely do unit tests for the 
 
 ## Styles
 - To style the application I decided to use styled-components, precisely because I chose to create the components from scratch, as explained below.
@@ -83,8 +65,5 @@ yarn cy:e2e
 * Switch to choose whether to view values ​​in Celsius or Farenheit
 
 * Switch that allows you to switch between light or dark themes to facilitate viewing according to the user's preference
-
-
-## If you have any questions, feel free to contact me by email or cell phone, this opportunity represents a lot for me and I am willing to invest more energy if I need to show more of my knowledge and be able to participate in this incredible project.
 
 
